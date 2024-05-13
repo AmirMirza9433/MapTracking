@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* MapTracking.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MapTracking.m */; };
+		00E356F31AD99517003FC87E /* MapTrackingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MapTrackingTests.m */; };
 		017186753F674DD08D629624 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE509A2A09B0402FA5D5FCC5 /* Poppins-ExtraLight.ttf */; };
 		042E7C1B2BAAEDFC00A5C4BC /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 042E7C1A2BAAEDDF00A5C4BC /* AntDesign.ttf */; };
 		042E7C1C2BAAEDFC00A5C4BC /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 042E7C0C2BAAEDDE00A5C4BC /* Entypo.ttf */; };
@@ -57,9 +57,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* MapTracking.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapTracking.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* MapTrackingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapTrackingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* MapTracking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapTracking.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* MapTrackingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapTrackingTests.m; sourceTree = "<group>"; };
 		042E7C082BAAEDDE00A5C4BC /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		042E7C092BAAEDDE00A5C4BC /* FontAwesome6_Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome6_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome6_Solid.ttf"; sourceTree = "<group>"; };
 		042E7C0A2BAAEDDE00A5C4BC /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
@@ -91,12 +91,12 @@
 		4715979C10DD49FDA57DF9F0 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraBold.ttf"; path = "../src/assets/fonts/Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
 		4C1C1C7075314298A4428EC5 /* Poppins-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Black.ttf"; path = "../src/assets/fonts/Poppins-Black.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-MapTracking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapTracking.release.xcconfig"; path = "Target Support Files/Pods-MapTracking/Pods-MapTracking.release.xcconfig"; sourceTree = "<group>"; };
-		5B7EB9410499542E8C5724F5 /* Pods-MapTracking-MapTracking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapTracking-MapTracking.debug.xcconfig"; path = "Target Support Files/Pods-MapTracking-MapTracking/Pods-MapTracking-MapTracking.debug.xcconfig"; sourceTree = "<group>"; };
+		5B7EB9410499542E8C5724F5 /* Pods-MapTracking-MapTrackingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapTracking-MapTrackingTests.debug.xcconfig"; path = "Target Support Files/Pods-MapTracking-MapTrackingTests/Pods-MapTracking-MapTrackingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6DA5508EDB4DD1B2ED38A70F /* Pods_Jesuspod_JesuspodTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jesuspod_JesuspodTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70AB7B4E74E0420A95E6DCBD /* Poppins-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Bold.ttf"; path = "../src/assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = MapTracking/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83A575E1FF50474F8EFE0E3B /* Poppins-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Thin.ttf"; path = "../src/assets/fonts/Poppins-Thin.ttf"; sourceTree = "<group>"; };
-		89C6BE57DB24E9ADA2F236DE /* Pods-MapTracking-MapTracking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapTracking-MapTracking.release.xcconfig"; path = "Target Support Files/Pods-MapTracking-MapTracking/Pods-MapTracking-MapTracking.release.xcconfig"; sourceTree = "<group>"; };
+		89C6BE57DB24E9ADA2F236DE /* Pods-MapTracking-MapTrackingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapTracking-MapTrackingTests.release.xcconfig"; path = "Target Support Files/Pods-MapTracking-MapTrackingTests/Pods-MapTracking-MapTrackingTests.release.xcconfig"; sourceTree = "<group>"; };
 		98C9FC9F5C6640F9B9CACF07 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Medium.ttf"; path = "../src/assets/fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		C20CF966F0D35A36FA9D94B5 /* Pods_Jesuspod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jesuspod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D297B390808A408B966178C8 /* BootSplash.storyboard */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = BootSplash.storyboard; path = MapTracking/BootSplash.storyboard; sourceTree = "<group>"; };
@@ -126,13 +126,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* MapTracking */ = {
+		00E356EF1AD99517003FC87E /* MapTrackingTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* MapTracking.m */,
+				00E356F21AD99517003FC87E /* MapTrackingTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = MapTracking;
+			path = MapTrackingTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -223,7 +223,7 @@
 			children = (
 				13B07FAE1A68108700A75B9A /* MapTracking */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* MapTracking */,
+				00E356EF1AD99517003FC87E /* MapTrackingTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
@@ -238,7 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				13B07F961A680F5B00A75B9A /* MapTracking.app */,
-				00E356EE1AD99517003FC87E /* MapTracking.xctest */,
+				00E356EE1AD99517003FC87E /* MapTrackingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -248,8 +248,8 @@
 			children = (
 				3B4392A12AC88292D35C810B /* Pods-MapTracking.debug.xcconfig */,
 				5709B34CF0A7D63546082F79 /* Pods-MapTracking.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-MapTracking-MapTracking.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-MapTracking-MapTracking.release.xcconfig */,
+				5B7EB9410499542E8C5724F5 /* Pods-MapTracking-MapTrackingTests.debug.xcconfig */,
+				89C6BE57DB24E9ADA2F236DE /* Pods-MapTracking-MapTrackingTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -257,9 +257,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* MapTracking */ = {
+		00E356ED1AD99517003FC87E /* MapTrackingTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "MapTracking" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "MapTrackingTests" */;
 			buildPhases = (
 				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -273,9 +273,9 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = MapTracking;
-			productName = MapTracking;
-			productReference = 00E356EE1AD99517003FC87E /* MapTracking.xctest */;
+			name = MapTrackingTests;
+			productName = MapTrackingTests;
+			productReference = 00E356EE1AD99517003FC87E /* MapTrackingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		13B07F861A680F5B00A75B9A /* MapTracking */ = {
@@ -333,7 +333,7 @@
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* MapTracking */,
-				00E356ED1AD99517003FC87E /* MapTracking */,
+				00E356ED1AD99517003FC87E /* MapTrackingTests */,
 			);
 		};
 /* End PBXProject section */
@@ -436,7 +436,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MapTracking-MapTracking-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-MapTracking-MapTrackingTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -471,15 +471,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MapTracking-MapTracking/Pods-MapTracking-MapTracking-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MapTracking-MapTrackingTests/Pods-MapTracking-MapTrackingTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MapTracking-MapTracking/Pods-MapTracking-MapTracking-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MapTracking-MapTrackingTests/Pods-MapTracking-MapTrackingTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapTracking-MapTracking/Pods-MapTracking-MapTracking-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapTracking-MapTrackingTests/Pods-MapTracking-MapTrackingTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D9237D10304BF6AE7F3F5EB0 /* [CP-User] [RNFB] Core Configuration */ = {
@@ -518,15 +518,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MapTracking-MapTracking/Pods-MapTracking-MapTracking-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MapTracking-MapTrackingTests/Pods-MapTracking-MapTrackingTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MapTracking-MapTracking/Pods-MapTracking-MapTracking-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MapTracking-MapTrackingTests/Pods-MapTracking-MapTrackingTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapTracking-MapTracking/Pods-MapTracking-MapTracking-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapTracking-MapTrackingTests/Pods-MapTracking-MapTrackingTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -555,7 +555,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* MapTracking.m in Sources */,
+				00E356F31AD99517003FC87E /* MapTrackingTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,7 +581,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-MapTracking-MapTracking.debug.xcconfig */;
+			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-MapTracking-MapTrackingTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -589,7 +589,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = MapTracking/Info.plist;
+				INFOPLIST_FILE = MapTrackingTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -601,7 +601,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.maptracking.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jesuspod.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MapTracking.app/MapTracking";
 			};
@@ -609,12 +609,12 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-MapTracking-MapTracking.release.xcconfig */;
+			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-MapTracking-MapTrackingTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = MapTracking/Info.plist;
+				INFOPLIST_FILE = MapTrackingTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -626,7 +626,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.maptracking.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jesuspod.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MapTracking.app/MapTracking";
 			};
@@ -868,7 +868,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "MapTracking" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "MapTrackingTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
