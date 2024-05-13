@@ -19,13 +19,9 @@ const Routes = () => {
       }}
     >
       {token ? (
-        <>
-          <Stack.Screen name="OptionScreen" component={OptionScreen} />
-        </>
+        <Stack.Screen name="Home" component={Home} />
       ) : (
-        <>
-          <Stack.Screen name="Home" component={Home} />
-        </>
+        <Stack.Screen name="OptionScreen" component={OptionScreen} />
       )}
     </Stack.Navigator>
   );

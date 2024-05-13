@@ -24,7 +24,7 @@ const CustomInput = ({ value, onChangeText, error, email, name, pass }) => {
           family={email || name ? "Feather" : "MaterialCommunityIcons"}
           name={email ? "mail" : name ? "user" : "lock-outline"}
           size={22}
-          color={error ? COLORS.red : COLORS.darkGray}
+          color={error ? COLORS.red : COLORS.primaryColor}
         />
 
         <View style={{ flex: 1 }}>

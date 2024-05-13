@@ -114,6 +114,9 @@ const LoginModal = ({
       if (error.code === "auth/too-many-requests") {
         ToastMessage("Too Many Request");
       }
+      if (error.code === "auth/invalid-credential") {
+        ToastMessage("Invalid Credential");
+      }
       console.log("================LoginError", error.code, error.message);
     }
   };

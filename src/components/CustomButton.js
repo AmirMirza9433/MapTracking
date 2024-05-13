@@ -4,6 +4,7 @@ import { COLORS } from "../utils/COLORS";
 import { Fonts } from "../utils/fonts";
 import CustomText from "./CustomText";
 import Icons from "./Icons";
+import { backgroundUpload } from "react-native-compressor";
 
 const CustomButton = ({
   onPress,
@@ -11,28 +12,14 @@ const CustomButton = ({
   disabled,
   loading,
   customStyle,
-  customText,
   marginBottom,
   marginTop,
   backgroundColor,
-  color,
   width = "100%",
   height = 53,
-  borderRadius = 50,
-  justifyContent = "center",
-  alignItems = "center",
-  flexDirection = "row",
   alignSelf = "center",
-  fontSize,
-  indicatorcolor,
-  borderWidth,
-  borderColor,
-  iconname,
-  iconfamily,
-  iconColor,
-  icon,
-  iconGap,
-  iconFontSize,
+  borderColor = COLORS.primaryColor,
+
   btnFont,
 }) => {
   return (
@@ -50,61 +37,30 @@ const CustomButton = ({
           marginBottom,
           width,
           height,
-          borderRadius,
-          flexDirection,
-          alignItems,
-          justifyContent,
+          borderRadius: 100,
+          alignItems: "center",
+          justifyContent: "center",
           alignSelf,
-          borderWidth,
+          borderWidth: 2,
           borderColor,
         },
         customStyle,
       ]}
       onPress={onPress}
     >
-      {loading && (
+      {loading ? (
         <ActivityIndicator
           size={25}
-          color={indicatorcolor ? COLORS.primaryColor : COLORS.white}
+          color={backgroundColor ? COLORS.primaryColor : COLORS.white}
         />
-      )}
-      {!loading && (
-        <View
-          style={{
-            flexDirection: "row",
-            alignItems: "center",
-            gap: iconGap || 5,
-          }}
-        >
-          {icon ? (
-            <View
-              style={{
-                backgroundColor: COLORS.primaryColor,
-                height: 25,
-                width: 25,
-                borderRadius: 20,
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <Icons
-                family={iconfamily}
-                name={iconname}
-                color={iconColor}
-                size={iconFontSize}
-              />
-            </View>
-          ) : null}
-
-          <CustomText
-            textStyle={customText}
-            label={title}
-            color={color ? color : COLORS.white}
-            fontFamily={btnFont || Fonts.semiBold}
-            fontSize={fontSize || 16}
-            lineHeight={22}
-          />
-        </View>
+      ) : (
+        <CustomText
+          label={title}
+          color={backgroundColor ? COLORS.primaryColor : COLORS.white}
+          fontFamily={Fonts.semiBold}
+          fontSize={16}
+          lineHeight={22}
+        />
       )}
     </TouchableOpacity>
   );

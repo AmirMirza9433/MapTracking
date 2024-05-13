@@ -1,4 +1,4 @@
-import { Platform, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import React, { useEffect, useState } from "react";
 
 import ScreenWrapper from "../../components/ScreenWrapper";
@@ -50,32 +50,21 @@ const OptionScreen = () => {
           setForgotModal={setForgotModal}
         />
         <ImageFast
-          source={images.appLogo}
+          source={images.appIcon}
           style={styles.logo}
           resizeMode="contain"
         />
-        <CustomText
-          label="Let the Stories Begin."
-          fontFamily={Fonts.medium}
-          fontSize={14}
-          marginTop={5}
-        />
         <CustomButton
+          color={COLORS.white}
+          title="Sign Up with Email"
+          marginTop={20}
+          marginBottom={10}
           backgroundColor="transparent"
-          color={COLORS.black}
-          title="Continue with Google"
-          borderColor={COLORS.primaryColor}
-          borderWidth={2}
-          iconname="google"
-          iconfamily="AntDesign"
-          iconColor={COLORS.white}
-          icon={true}
-          marginTop={40}
+          onPress={() => setSignupModal(true)}
         />
-
         <View style={styles.divider}>
           <View style={styles.dividerLines} />
-          <CustomText label={"Or"} fontFamily={Fonts.bold} fontSize={14} />
+          <CustomText label="Or" fontFamily={Fonts.bold} fontSize={14} />
           <View style={styles.dividerLines} />
         </View>
 
@@ -86,17 +75,7 @@ const OptionScreen = () => {
           marginBottom={10}
           onPress={() => setLoginModal(true)}
         />
-        <Text style={styles.footerText}>
-          Don’t have an account?
-          <CustomText
-            label=" Sign Up"
-            color={COLORS.primaryColor}
-            fontFamily={Fonts.bold}
-            fontSize={14}
-            onPress={() => setSignupModal(true)}
-            marginBottom={Platform.OS == "android" ? -8 : -2}
-          />
-        </Text>
+
         <View style={{ flex: 1 }} />
         <Text style={styles.footerText}>
           By continuing, I agree to
@@ -119,8 +98,9 @@ const styles = StyleSheet.create({
   logo: {
     width: 130,
     height: 130,
-    borderRadius: 5,
+    borderRadius: 10,
     marginTop: 50,
+    marginBottom: 20,
   },
 
   container: {
@@ -136,7 +116,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   dividerLines: {
-    backgroundColor: COLORS.gray,
+    backgroundColor: COLORS.primaryColor,
     height: 2,
     width: 120,
   },

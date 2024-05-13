@@ -1,15 +1,19 @@
 import { StyleSheet, View, TouchableOpacity } from "react-native";
+import { useDispatch } from "react-redux";
 import React from "react";
 
 import CustomText from "./CustomText";
 import ImageFast from "./ImageFast";
 import Icons from "./Icons";
 
+import { setUser } from "../store/reducer/usersSlice";
+import { logout } from "../store/reducer/AuthConfig";
 import { images } from "../assets/images";
 import { COLORS } from "../utils/COLORS";
 import { Fonts } from "../utils/fonts";
 
 const Header = ({ title, subTitle, onPress, userProfile }) => {
+  const dispatch = useDispatch();
   return (
     <TouchableOpacity
       activeOpacity={0.6}
@@ -46,7 +50,10 @@ const Header = ({ title, subTitle, onPress, userProfile }) => {
         family="MaterialIcons"
         name="logout"
         size={30}
-        onPress={() => {}}
+        onPress={() => {
+          dispatch(logout());
+          dispatch(setUser({}));
+        }}
         color={COLORS.primaryColor}
       />
     </TouchableOpacity>
