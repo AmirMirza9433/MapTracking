@@ -1,6 +1,7 @@
+import { PermissionsAndroid, Platform, StyleSheet, View } from "react-native";
+import Geolocation from "@react-native-community/geolocation";
 import MapView, { Marker } from "react-native-maps";
-import { StyleSheet, View } from "react-native";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import ScreenWrapper from "../../components/ScreenWrapper";
 import CustomButton from "../../components/CustomButton";
@@ -13,6 +14,53 @@ import { Fonts } from "../../utils/fonts";
 
 const DetailScreen = ({ route, navigation }) => {
   const item = route.params?.item;
+  const [location, setLocation] = useState(null);
+  console.log("=================location", location);
+
+  useEffect(() => {
+    if (Platform.OS === "android") {
+      requestLocationPermission();
+    } else {
+      getCurrentLocation();
+    }
+  }, []);
+
+  const requestLocationPermission = async () => {
+    try {
+      const granted = await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+        {
+          title: "Location Permission",
+          message: "This app needs access to your location.",
+          buttonNeutral: "Ask Me Later",
+          buttonNegative: "Cancel",
+          buttonPositive: "OK",
+        }
+      );
+      if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+        console.log("You can use the location");
+        getCurrentLocation();
+      } else {
+        console.log("Location permission denied");
+      }
+    } catch (err) {
+      console.warn(err);
+      console.log("Failed to request location permission");
+    }
+  };
+
+  const getCurrentLocation = () => {
+    Geolocation.getCurrentPosition(
+      (position) => {
+        setLocation(position.coords);
+      },
+      (error) => {
+        console.log(error.code, error.message);
+      },
+      { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
+    );
+  };
+
   return (
     <ScreenWrapper
       paddingHorizontal={0.1}
