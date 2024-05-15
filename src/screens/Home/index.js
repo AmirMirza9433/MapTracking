@@ -7,6 +7,7 @@ import SearchInput from "../../components/SearchInput";
 import Header from "../../components/Header";
 import Card from "../../components/Card";
 
+import { placesList } from "../../utils/constants";
 import { COLORS } from "../../utils/COLORS";
 
 const Home = ({ navigation }) => {
@@ -17,7 +18,6 @@ const Home = ({ navigation }) => {
       headerUnScrollable={() => (
         <View style={{ padding: 20 }}>
           <Header
-            onPress={() => navigation.navigate("Profile")}
             userProfile={userData?.userImage}
             title={userData?.userName}
             subTitle="Enjoy your favorite places"
@@ -27,15 +27,15 @@ const Home = ({ navigation }) => {
       )}
     >
       <FlatList
-        data={[0, 1]}
-        showsHorizontalScrollIndicator={false}
+        data={placesList}
+        showsVerticalScrollIndicator={false}
         keyExtractor={(_, i) => i.toString()}
-        renderItem={({ item, index }) => (
+        renderItem={({ item }) => (
           <Card
-            image="image"
-            heading="heading"
-            title="title"
-            des="description"
+            image={{ uri: item.image }}
+            title={item.name}
+            des={item.desc}
+            onPress={() => navigation.navigate("DetailScreen", { item })}
           />
         )}
       />

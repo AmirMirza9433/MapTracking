@@ -1,10 +1,10 @@
-import { TouchableOpacity, ActivityIndicator, View } from "react-native";
+import { TouchableOpacity, ActivityIndicator } from "react-native";
 import React from "react";
+
+import CustomText from "./CustomText";
+
 import { COLORS } from "../utils/COLORS";
 import { Fonts } from "../utils/fonts";
-import CustomText from "./CustomText";
-import Icons from "./Icons";
-import { backgroundUpload } from "react-native-compressor";
 
 const CustomButton = ({
   onPress,
@@ -19,8 +19,6 @@ const CustomButton = ({
   height = 53,
   alignSelf = "center",
   borderColor = COLORS.primaryColor,
-
-  btnFont,
 }) => {
   return (
     <TouchableOpacity

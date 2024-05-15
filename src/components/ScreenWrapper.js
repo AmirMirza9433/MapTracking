@@ -25,7 +25,7 @@ const FocusAwareStatusBar = (props) => {
 const ScreenWrapper = ({
   children,
   statusBarColor = COLORS.bg,
-  transclucent = false,
+  transcalent = false,
   scrollEnabled = false,
   backgroundImage,
   backgroundColor = COLORS.bg,
@@ -53,9 +53,9 @@ const ScreenWrapper = ({
         <FocusAwareStatusBar
           barStyle={barStyle}
           backgroundColor={statusBarColor}
-          translucent={transclucent}
+          translucent={transcalent}
         />
-        {!transclucent && (
+        {!transcalent && (
           <SafeAreaView
             style={(styles.container, { backgroundColor: statusBarColor })}
           />

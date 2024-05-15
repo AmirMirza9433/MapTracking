@@ -5,6 +5,7 @@ import React from "react";
 //screens
 import OptionScreen from "../screens/OptionScreen";
 import Home from "../screens/Home";
+import DetailScreen from "../screens/DetailScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -19,7 +20,10 @@ const Routes = () => {
       }}
     >
       {token ? (
-        <Stack.Screen name="Home" component={Home} />
+        <>
+          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="DetailScreen" component={DetailScreen} />
+        </>
       ) : (
         <Stack.Screen name="OptionScreen" component={OptionScreen} />
       )}

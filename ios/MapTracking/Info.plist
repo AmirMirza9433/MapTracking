@@ -41,6 +41,21 @@
 	<string></string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Deevo want to access gallery to upload pictures for store and profile</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+<string>Your custom message here</string>
+<key>NSLocationAlwaysUsageDescription</key>
+<string>Your custom message here</string>
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>We use your location to show relevant data.</string>
+<key>NSLocationAlwaysUsageDescription</key>
+<string>We use your location to show relevant data.</string>
+<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+<string>We use your location to show relevant data.</string>
+<key>UIBackgroundModes</key>
+<array>
+	<string>location</string>
+</array>
+
 	<key>UIAppFonts</key>
 	<array>
 		<string>AntDesign.ttf</string>

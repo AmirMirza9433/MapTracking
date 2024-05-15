@@ -15,23 +15,18 @@ import { Fonts } from "../utils/fonts";
 const Header = ({ title, subTitle, onPress, userProfile }) => {
   const dispatch = useDispatch();
   return (
-    <TouchableOpacity
-      activeOpacity={0.6}
-      onPress={onPress}
-      disabled={!onPress}
-      style={styles.mainContainer}
-    >
-      <View
-        style={{
-          flexDirection: "row",
-          alignItems: "center",
-        }}
-      >
+    <View style={styles.mainContainer}>
+      <View style={styles.row}>
         <ImageFast
           style={styles.profile}
+          isView
           source={userProfile ? { uri: userProfile } : images.placeholder}
         />
-        <View>
+        <TouchableOpacity
+          activeOpacity={0.6}
+          onPress={onPress}
+          disabled={!onPress}
+        >
           <CustomText
             label={title}
             fontSize={18}
@@ -44,7 +39,7 @@ const Header = ({ title, subTitle, onPress, userProfile }) => {
             fontFamily={Fonts.regular}
             color={COLORS.gray}
           />
-        </View>
+        </TouchableOpacity>
       </View>
       <Icons
         family="MaterialIcons"
@@ -56,7 +51,7 @@ const Header = ({ title, subTitle, onPress, userProfile }) => {
         }}
         color={COLORS.primaryColor}
       />
-    </TouchableOpacity>
+    </View>
   );
 };
 
@@ -75,9 +70,8 @@ const styles = StyleSheet.create({
     borderRadius: 100,
     marginRight: 15,
   },
-  icon: {
-    height: 25,
-    width: 25,
-    resizeMode: "contain",
+  row: {
+    flexDirection: "row",
+    alignItems: "center",
   },
 });

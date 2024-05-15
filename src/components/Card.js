@@ -7,10 +7,14 @@ import ImageFast from "./ImageFast";
 import { COLORS } from "../utils/COLORS";
 import { Fonts } from "../utils/fonts";
 
-const Card = ({ title, image, heading, des }) => {
+const Card = ({ title, image, onPress, des }) => {
   return (
-    <TouchableOpacity activeOpacity={0.9} style={styles.container}>
-      <ImageFast style={styles.image} source={{ uri: image }} />
+    <TouchableOpacity
+      activeOpacity={0.9}
+      style={styles.container}
+      onPress={onPress}
+    >
+      <ImageFast style={styles.image} source={image} />
       <View style={{ padding: 10 }}>
         <CustomText
           label={title}

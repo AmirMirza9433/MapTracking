@@ -1,9 +1,8 @@
 import {
   ActivityIndicator,
+  TouchableOpacity,
   Dimensions,
   Platform,
-  TouchableOpacity,
-  View,
 } from "react-native";
 import FastImage from "react-native-fast-image";
 import React, { useState } from "react";
