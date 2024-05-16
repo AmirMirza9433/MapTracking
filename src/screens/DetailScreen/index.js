@@ -15,7 +15,6 @@ import { Fonts } from "../../utils/fonts";
 const DetailScreen = ({ route, navigation }) => {
   const item = route.params?.item;
   const [location, setLocation] = useState(null);
-  console.log("=================location", location);
 
   useEffect(() => {
     if (Platform.OS === "android") {
@@ -52,6 +51,8 @@ const DetailScreen = ({ route, navigation }) => {
   const getCurrentLocation = () => {
     Geolocation.getCurrentPosition(
       (position) => {
+        console.log("=================position", position);
+
         setLocation(position.coords);
       },
       (error) => {
@@ -71,7 +72,7 @@ const DetailScreen = ({ route, navigation }) => {
           title="Direction"
           marginBottom={30}
           width="90%"
-          onPress={() => navigation.navigate("Map", { item })}
+          onPress={() => navigation.navigate("Map", { item, location })}
         />
       )}
     >
