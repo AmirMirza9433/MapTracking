@@ -6,6 +6,7 @@ import React from "react";
 import OptionScreen from "../screens/OptionScreen";
 import Home from "../screens/Home";
 import DetailScreen from "../screens/DetailScreen";
+import Map from "../screens/Map";
 
 const Stack = createNativeStackNavigator();
 
@@ -23,6 +24,7 @@ const Routes = () => {
         <>
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="DetailScreen" component={DetailScreen} />
+          <Stack.Screen name="Map" component={Map} />
         </>
       ) : (
         <Stack.Screen name="OptionScreen" component={OptionScreen} />

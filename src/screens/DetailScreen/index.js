@@ -67,7 +67,12 @@ const DetailScreen = ({ route, navigation }) => {
       transcalent
       statusBarColor="transparent"
       footerUnScrollable={() => (
-        <CustomButton title="Direction" marginBottom={30} width="90%" />
+        <CustomButton
+          title="Direction"
+          marginBottom={30}
+          width="90%"
+          onPress={() => navigation.navigate("Map", { item })}
+        />
       )}
     >
       <Icons
