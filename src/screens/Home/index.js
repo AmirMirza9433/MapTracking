@@ -1,6 +1,13 @@
-import { FlatList, StyleSheet, View } from "react-native";
-import { useSelector } from "react-redux";
-import React from "react";
+import Geolocation from "@react-native-community/geolocation";
+import { useDispatch, useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import {
+  PermissionsAndroid,
+  StyleSheet,
+  Platform,
+  FlatList,
+  View,
+} from "react-native";
 
 import ScreenWrapper from "../../components/ScreenWrapper";
 import SearchInput from "../../components/SearchInput";
@@ -9,9 +16,57 @@ import Card from "../../components/Card";
 
 import { placesList } from "../../utils/constants";
 import { COLORS } from "../../utils/COLORS";
+import { setLocation } from "../../store/reducer/AuthConfig";
 
 const Home = ({ navigation }) => {
   const userData = useSelector((state) => state.user.users);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (Platform.OS === "android") {
+      requestLocationPermission();
+    } else {
+      getCurrentLocation();
+    }
+  }, []);
+
+  const requestLocationPermission = async () => {
+    try {
+      const granted = await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+        {
+          title: "Location Permission",
+          message: "This app needs access to your location.",
+          buttonNeutral: "Ask Me Later",
+          buttonNegative: "Cancel",
+          buttonPositive: "OK",
+        }
+      );
+      if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+        console.log("You can use the location");
+        getCurrentLocation();
+      } else {
+        console.log("Location permission denied");
+      }
+    } catch (err) {
+      console.warn(err);
+      console.log("Failed to request location permission");
+    }
+  };
+
+  const getCurrentLocation = () => {
+    Geolocation.getCurrentPosition(
+      (position) => {
+        console.log("=================position", position);
+
+        dispatch(setLocation(position.coords));
+      },
+      (error) => {
+        console.log(error.code, error.message);
+      },
+      { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
+    );
+  };
 
   return (
     <ScreenWrapper

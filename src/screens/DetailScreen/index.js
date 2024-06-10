@@ -1,7 +1,6 @@
-import { PermissionsAndroid, Platform, StyleSheet, View } from "react-native";
-import Geolocation from "@react-native-community/geolocation";
+import { StyleSheet, View } from "react-native";
 import MapView, { Marker } from "react-native-maps";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import ScreenWrapper from "../../components/ScreenWrapper";
 import CustomButton from "../../components/CustomButton";
@@ -14,53 +13,6 @@ import { Fonts } from "../../utils/fonts";
 
 const DetailScreen = ({ route, navigation }) => {
   const item = route.params?.item;
-  const [location, setLocation] = useState(null);
-
-  useEffect(() => {
-    if (Platform.OS === "android") {
-      requestLocationPermission();
-    } else {
-      getCurrentLocation();
-    }
-  }, []);
-
-  const requestLocationPermission = async () => {
-    try {
-      const granted = await PermissionsAndroid.request(
-        PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
-        {
-          title: "Location Permission",
-          message: "This app needs access to your location.",
-          buttonNeutral: "Ask Me Later",
-          buttonNegative: "Cancel",
-          buttonPositive: "OK",
-        }
-      );
-      if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-        console.log("You can use the location");
-        getCurrentLocation();
-      } else {
-        console.log("Location permission denied");
-      }
-    } catch (err) {
-      console.warn(err);
-      console.log("Failed to request location permission");
-    }
-  };
-
-  const getCurrentLocation = () => {
-    Geolocation.getCurrentPosition(
-      (position) => {
-        console.log("=================position", position);
-
-        setLocation(position.coords);
-      },
-      (error) => {
-        console.log(error.code, error.message);
-      },
-      { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
-    );
-  };
 
   return (
     <ScreenWrapper
@@ -72,7 +24,7 @@ const DetailScreen = ({ route, navigation }) => {
           title="Direction"
           marginBottom={30}
           width="90%"
-          onPress={() => navigation.navigate("Map", { item, location })}
+          onPress={() => navigation.navigate("Map", { item })}
         />
       )}
     >
